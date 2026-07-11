@@ -17,7 +17,7 @@ export default function Hero() {
             duration={1.2}
             className="hero-headline font-heading"
           />
-          <a href="#products" className="btn-pill btn-pill-black hero-btn">
+          <a href="#products" className="btn-pill btn-pill-white hero-btn">
             Shop Now
           </a>
         </div>

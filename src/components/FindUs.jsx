@@ -1,5 +1,6 @@
 import React from 'react';
 import findUsImage from '../assets/find_us_hand.png';
+import LineWaves from './LineWaves';
 
 export default function FindUs() {
   return (
@@ -13,6 +14,24 @@ export default function FindUs() {
         </div>
         
         <div className="find-us-content">
+          <div className="featured-banner-waves">
+            <LineWaves
+              speed={0.15}
+              innerLineCount={24}
+              outerLineCount={28}
+              warpIntensity={0.6}
+              rotation={45}
+              edgeFadeWidth={0.2}
+              colorCycleSpeed={0.5}
+              brightness={0.8}
+              color1="#b0b0b0"
+              color2="#cccccc"
+              color3="#9c8b76"
+              enableMouseInteraction={true}
+              mouseInfluence={1.2}
+            />
+          </div>
+          
           <div className="find-us-header-text">
             <p className="find-us-desc font-display text-uppercase">
               Experience the refined taste of VÉLOCE. Visit our premium stocklists for your next alcohol-free aperitif.

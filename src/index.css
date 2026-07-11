@@ -330,7 +330,7 @@ img {
 
 .hero-text-block {
   flex: 4; /* 40% width */
-  background-color: var(--color-tan);
+  background-color: var(--color-black);
   padding: 80px 60px;
   display: flex;
   flex-direction: column;
@@ -342,7 +342,7 @@ img {
 .hero-headline {
   font-size: 3.2rem;
   line-height: 1.05;
-  color: var(--color-black);
+  color: var(--color-white);
   margin-bottom: 40px;
   max-width: 90%;
 }
@@ -399,7 +399,6 @@ img {
   }
 }
 
-/* About Section Styles */
 .about-section {
   padding: 120px 0;
   width: 100%;
@@ -409,6 +408,8 @@ img {
   text-align: center;
   border-bottom: 1.5px solid var(--color-black);
   background-color: var(--color-white);
+  position: relative;
+  overflow: hidden;
 }
 
 .about-content {
@@ -417,6 +418,8 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .about-text {
@@ -566,24 +569,29 @@ img {
   }
 }
 
-/* Product Grid Styles */
 .product-grid-section {
   width: 100%;
   background-color: var(--color-white);
   border-bottom: 1.5px solid var(--color-black);
+  position: relative;
+  overflow: hidden;
 }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
   padding: 60px;
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: var(--transition-smooth);
 }
 
@@ -664,7 +672,7 @@ img {
 
 /* Aesthetic Brand Cell */
 .grid-brand-cell {
-  background-color: var(--color-tan);
+  background-color: var(--color-black);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -682,14 +690,14 @@ img {
 .brand-cell-tagline {
   font-size: 4rem;
   line-height: 0.9;
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .brand-cell-text {
   font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 @media (max-width: 1024px) {
@@ -748,26 +756,26 @@ img {
 
 .find-us-sidebar {
   flex: 4; /* 40% width */
-  background-color: var(--color-tan);
+  background-color: var(--color-black);
   padding: 80px 60px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
-  border-right: 1.5px solid var(--color-black);
+  border-right: 1.5px solid var(--color-white);
 }
 
 .sidebar-word {
   font-size: 5rem;
   line-height: 0.95;
-  color: var(--color-black);
+  color: var(--color-white);
   opacity: 0.35;
   transition: var(--transition-fast);
 }
 
 .sidebar-word.highlighted {
   opacity: 1.0;
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .sidebar-word:hover {
@@ -778,6 +786,9 @@ img {
   flex: 6; /* 60% width */
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-white);
 }
 
 .find-us-header-text {
@@ -785,6 +796,8 @@ img {
   border-bottom: 1.5px solid var(--color-black);
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .find-us-desc {
@@ -801,6 +814,8 @@ img {
   background-color: var(--color-grey-light);
   overflow: hidden;
   height: 520px;
+  position: relative;
+  z-index: 1;
 }
 
 .find-us-img {
@@ -821,7 +836,11 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 1;
 }
 
 .footer-links-col {
@@ -889,7 +908,7 @@ img {
   
   .find-us-sidebar {
     border-right: none;
-    border-bottom: 1.5px solid var(--color-black);
+    border-bottom: 1.5px solid var(--color-white);
     padding: 40px 30px;
     gap: 8px;
     align-items: flex-start;
@@ -933,6 +952,8 @@ img {
   width: 100%;
   background-color: var(--color-white);
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .footer-main {
@@ -941,6 +962,8 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-logo-wrapper {
