@@ -429,6 +429,7 @@ img {
   text-align: center;
   border-bottom: 1.5px solid var(--color-white);
   background-color: transparent;
+  background: radial-gradient(circle, rgba(11, 11, 11, 0.8) 0%, rgba(11, 11, 11, 0.3) 70%, transparent 100%);
   position: relative;
   overflow: hidden;
 }
@@ -449,6 +450,7 @@ img {
   font-weight: 800;
   letter-spacing: -0.01em;
   color: var(--color-white);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .about-btn {
@@ -827,6 +829,7 @@ img {
   font-weight: 800;
   color: var(--color-white);
   text-align: left;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .find-us-image-container {
@@ -1006,6 +1009,7 @@ img {
   letter-spacing: 0.15em;
   color: var(--color-white);
   margin-top: 10px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .footer-copyright {
