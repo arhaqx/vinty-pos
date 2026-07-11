@@ -8,7 +8,7 @@ export default function Header() {
     <header className="site-header">
       <div className="header-main container">
         <a href="/" className="header-logo-link">
-          <VeloceLogo className="header-logo" color="var(--color-black)" height="42px" />
+          <VeloceLogo className="header-logo" color="var(--color-white)" height="42px" />
         </a>
         
         <div className="header-right">

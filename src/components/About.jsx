@@ -6,19 +6,19 @@ export default function About() {
     <section id="about" className="about-section reveal-on-scroll">
       <div className="featured-banner-waves">
         <LineWaves
-          speed={0.18}
-          innerLineCount={24}
-          outerLineCount={28}
-          warpIntensity={0.6}
-          rotation={45}
-          edgeFadeWidth={0.2}
-          colorCycleSpeed={0.5}
-          brightness={0.8}
-          color1="#b0b0b0"
-          color2="#cccccc"
-          color3="#9c8b76"
+          speed={0.2}
+          innerLineCount={28}
+          outerLineCount={32}
+          warpIntensity={0.8}
+          rotation={-45}
+          edgeFadeWidth={0.1}
+          colorCycleSpeed={0.8}
+          brightness={0.3}
+          color1="#c99b66"
+          color2="#ffffff"
+          color3="#111111"
           enableMouseInteraction={true}
-          mouseInfluence={1.2}
+          mouseInfluence={1.5}
         />
       </div>
       <div className="about-content container">

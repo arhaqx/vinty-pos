@@ -7,24 +7,24 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="featured-banner-waves">
         <LineWaves
-          speed={0.15}
-          innerLineCount={20}
-          outerLineCount={24}
-          warpIntensity={0.6}
-          rotation={60}
-          edgeFadeWidth={0.15}
-          colorCycleSpeed={0.5}
-          brightness={0.8}
-          color1="#b0b0b0"
-          color2="#cccccc"
-          color3="#9c8b76"
+          speed={0.2}
+          innerLineCount={28}
+          outerLineCount={32}
+          warpIntensity={0.8}
+          rotation={-45}
+          edgeFadeWidth={0.1}
+          colorCycleSpeed={0.8}
+          brightness={0.3}
+          color1="#c99b66"
+          color2="#ffffff"
+          color3="#111111"
           enableMouseInteraction={true}
-          mouseInfluence={1.2}
+          mouseInfluence={1.5}
         />
       </div>
       <div className="footer-main container">
         <div className="footer-logo-wrapper">
-          <VeloceLogo className="footer-logo-giant" color="var(--color-black)" />
+          <VeloceLogo className="footer-logo-giant" color="var(--color-white)" />
         </div>
         <p className="footer-tagline font-display text-uppercase">
           The Zero-Proof Aperitif for Modern Living.
