@@ -1,11 +1,11 @@
 import React from 'react';
 import heroImage from '../assets/hero_cocktails.png';
 import SplitText from '../bits';
-
+import GradualBlur from './GradualBlur';
 
 export default function Hero() {
   return (
-    <section className="hero-section">
+    <section className="hero-section" style={{ position: 'relative', overflow: 'hidden' }}>
       <div className="hero-container">
         <div className="hero-text-block">
           <SplitText
@@ -29,6 +29,16 @@ export default function Hero() {
           />
         </div>
       </div>
+      <GradualBlur
+        target="parent"
+        position="bottom"
+        height="6rem"
+        strength={3}
+        divCount={5}
+        curve="bezier"
+        exponential={true}
+        opacity={1}
+      />
     </section>
   );
 }

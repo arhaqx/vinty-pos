@@ -1,9 +1,10 @@
 import React from 'react';
 import featuredImage from '../assets/primavera_featured.png';
+import GradualBlur from './GradualBlur';
 
 export default function FeaturedBanner() {
   return (
-    <section className="featured-banner reveal-on-scroll">
+    <section className="featured-banner reveal-on-scroll" style={{ position: 'relative', overflow: 'hidden' }}>
       <div className="featured-container container">
         <div className="featured-badge font-display text-uppercase">New</div>
         <div className="featured-image-wrapper">
@@ -18,6 +19,16 @@ export default function FeaturedBanner() {
           A bold, spiced aperitif featuring cardamom, ginger, and cinnamon.
         </p>
       </div>
+      <GradualBlur
+        target="parent"
+        position="bottom"
+        height="6rem"
+        strength={3}
+        divCount={5}
+        curve="bezier"
+        exponential={true}
+        opacity={1}
+      />
     </section>
   );
 }
