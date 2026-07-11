@@ -344,7 +344,7 @@ img {
 
 .hero-text-block {
   flex: 4; /* 40% width */
-  background-color: var(--color-black);
+  background-color: rgba(11, 11, 11, 0.7);
   padding: 80px 60px;
   display: flex;
   flex-direction: column;
@@ -359,6 +359,7 @@ img {
   color: var(--color-white);
   margin-bottom: 40px;
   max-width: 90%;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-btn {
