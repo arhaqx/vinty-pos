@@ -2,7 +2,6 @@ import React from 'react';
 import lavandeImg from '../assets/product_lavande.png';
 import primaveraImg from '../assets/product_primavera.png';
 import speziaImg from '../assets/product_spezia.png';
-import LineWaves from './LineWaves';
 
 const products = [
   {
@@ -31,23 +30,6 @@ const products = [
 export default function ProductGrid() {
   return (
     <section id="products" className="product-grid-section">
-      <div className="featured-banner-waves">
-        <LineWaves
-          speed={0.2}
-          innerLineCount={28}
-          outerLineCount={32}
-          warpIntensity={0.8}
-          rotation={-45}
-          edgeFadeWidth={0.1}
-          colorCycleSpeed={0.8}
-          brightness={0.3}
-          color1="#c99b66"
-          color2="#ffffff"
-          color3="#111111"
-          enableMouseInteraction={true}
-          mouseInfluence={1.5}
-        />
-      </div>
       <div className="product-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card reveal-on-scroll">
