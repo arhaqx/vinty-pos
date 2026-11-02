@@ -17,15 +17,15 @@ if (result.status !== 0) process.exit(result.status ?? 1);
 
 const htmlPath = resolve(root, "dist/web/index.html");
 writeFileSync(htmlPath, readFileSync(htmlPath, "utf8").replace('<html lang="en">', '<html lang="id">'));
-let sourceCommit = null;
-let workingTreeDirty = null;
-try {
-  sourceCommit = execFileSync("git", ["rev-parse", "HEAD"], { cwd: root, encoding: "utf8" }).trim();
-  workingTreeDirty = execFileSync("git", ["status", "--porcelain"], { cwd: root, encoding: "utf8" }).trim().length > 0;
-} catch { /* Source archives can be built without Git metadata. */ }
+let sourceCommit = process.env.VERCEL_GIT_COMMIT_SHA || process.env.GITHUB_SHA || null;
+if (!sourceCommit) {
+  try {
+    sourceCommit = execFileSync("git", ["rev-parse", "HEAD"], { cwd: root, encoding: "utf8" }).trim();
+  } catch { /* Source archives can be built without Git metadata. */ }
+}
 const { version } = JSON.parse(readFileSync(resolve(root, "package.json"), "utf8"));
 writeFileSync(resolve(root, "dist/web/build-info.json"), JSON.stringify({
   sourceRepository: "https://github.com/arhaqx/veloce-landing-page",
-  sourceCommit, workingTreeDirty, version, builtAt: new Date().toISOString(),
+  sourceCommit, version, builtAt: new Date().toISOString(),
 }, null, 2) + "\n");
 console.log("Vinty POS web build: dist/web");
