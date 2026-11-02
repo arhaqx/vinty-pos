@@ -1,0 +1,46 @@
+name: Vinty POS checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vinty-pos-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --include=dev --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build:web
+      - run: npm run export:android -- --max-workers 2
+        env:
+          EXPO_NO_TELEMETRY: "1"
+          EXPO_OFFLINE: "1"
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: vinty-pos-web
+          path: dist/web
+          if-no-files-found: error
+          retention-days: 7
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: vinty-pos-android-bundle
+          path: dist/android
+          if-no-files-found: error
+          retention-days: 7

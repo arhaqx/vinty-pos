@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci --include=dev --no-audit --no-fund",
+  "buildCommand": "npm run build:web",
+  "outputDirectory": "dist/web",
+  "redirects": [
+    { "source": "/", "destination": "/demos/vinty-pos/index.html", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/demos/vinty-pos/:path*", "destination": "/:path*" }
+  ]
+}
